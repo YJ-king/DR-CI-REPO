@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-f', 'Dockerfile', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '.']
-    dir: 'was'
+    dir: '.'
+    args: ['build', '-f', 'was/Dockerfile', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest']
@@ -10,10 +10,8 @@ steps:
     args:
       - 'apply'
       - '-f'
-      - './was/was-deployment.yaml'
+      - 'was/was-deployment.yaml'
     env:
       - 'CLOUDSDK_COMPUTE_REGION=asia-northeast3'
       - 'CLOUDSDK_CONTAINER_CLUSTER=yj-gke-cluster'
 
-options:
-  logging: CLOUD_LOGGING_ONLY
