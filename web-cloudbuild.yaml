@@ -17,3 +17,5 @@ steps:
 images:
   - 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:latest'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
