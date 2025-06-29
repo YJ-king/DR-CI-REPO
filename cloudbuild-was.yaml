@@ -1,7 +1,6 @@
-# cloudbuild-was.yaml
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-f', 'was/Dockerfile', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '.']
+    args: ['build', '-f', 'Dockerfile', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '.']
     dir: 'was'
 
   - name: 'gcr.io/cloud-builders/docker'
