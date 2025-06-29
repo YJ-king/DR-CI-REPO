@@ -4,7 +4,7 @@ steps:
       'build',
       '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest',
       '-f', 'was/Dockerfile',
-      '.'
+      'was'
     ]
 
   - name: 'gcr.io/cloud-builders/docker'
