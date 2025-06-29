@@ -1,7 +1,7 @@
 FROM maven:3.9-eclipse-temurin-17 AS yjmulti
-WORKDIR /app/petclinic_btc
+WORKDIR /app
 
-COPY ./petclinic_btc /app/petclinic_btc
+COPY ./petclinic_btc .
 
 RUN mvn clean package -DskipTests -PMySQL
 
