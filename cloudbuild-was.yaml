@@ -1,7 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    dir: was
-    args: ['build', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '-f', 'Dockerfile', '.']
+    dir: 'was/petclinic_btc'
+    args: ['build', '-t', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest', '..']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yj-was:latest']

@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY ./petclinic_btc/ .
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package -DskipTests -PMySQL
 
 FROM tomcat:9.0.105-jdk11
 
