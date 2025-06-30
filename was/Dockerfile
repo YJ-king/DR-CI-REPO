@@ -1,7 +1,7 @@
 FROM maven:3.9-eclipse-temurin-17 AS yjmulti
 WORKDIR /app
 
-COPY was/petclinic_btc /app/petclinic_btc
+COPY was/petclinic_btc ./petclinic_btc
 
 RUN echo "======== /app 디렉토리 목록 ========" && \
     ls -al /app && \
