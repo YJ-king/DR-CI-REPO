@@ -3,6 +3,11 @@ WORKDIR /app
 
 COPY ./petclinic_btc .
 
+RUN echo "======== /app 디렉토리 목록 ========" && \
+    ls -al /app && \
+    echo "======== petclinic_btc 디렉토리 목록 ========" && \
+    ls -al /app/petclinic_btc
+
 RUN mvn -f petclinic_btc/pom.xml clean package -DskipTests -PMySQL
 
 FROM tomcat:9.0.105-jdk11
