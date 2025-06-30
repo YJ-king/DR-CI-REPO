@@ -5,15 +5,6 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:latest']
 
-  - name: 'gcr.io/cloud-builders/kubectl'
-    args:
-      - 'apply'
-      - '-f'
-      - './web/web-deployment.yaml'
-    env:
-      - 'CLOUDSDK_COMPUTE_REGION=asia-northeast3'
-      - 'CLOUDSDK_CONTAINER_CLUSTER=yj-gke-cluster'
-
 options:
   logging: CLOUD_LOGGING_ONLY
 
