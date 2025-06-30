@@ -18,4 +18,4 @@ RUN apt update && \
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-COPY --from=yjmulti /app/target/petclinic.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=yjmulti /app/petclinic_btc/target/petclinic.war /usr/local/tomcat/webapps/ROOT.war
