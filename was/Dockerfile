@@ -1,9 +1,9 @@
 FROM maven:3.9-eclipse-temurin-17 AS yjmulti
 WORKDIR /app
 
-COPY ./petclinic_btc/ .
+COPY ./petclinic_btc .
 
-RUN mvn clean package -DskipTests -PMySQL
+RUN mvn -f petclinic_btc/pom.xml clean package -DskipTests -PMySQL
 
 FROM tomcat:9.0.105-jdk11
 
