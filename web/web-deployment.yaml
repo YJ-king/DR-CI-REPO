@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web
-image: asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:web-20250701-01
+        image: asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:web-20250701-01
         ports:
         - containerPort: 80
         volumeMounts:
