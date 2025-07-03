@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:web-20250702-02
+        image: asia-northeast3-docker.pkg.dev/kdt1-finalproject/yj-repo/yjweb:web-20250703-11 web-20250703-11
         ports:
         - containerPort: 80
         volumeMounts:
