@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: web-servicetest
+            name: web-service
             port:
-              number: 8011
+              number: 80
