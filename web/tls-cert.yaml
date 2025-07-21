@@ -4,4 +4,4 @@ metadata:
   name: yj-managed-cert
 spec:
   domains:
-    - yjking.shop
+    - www.yjking.shop
